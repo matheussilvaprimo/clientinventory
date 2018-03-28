@@ -8,9 +8,9 @@ namespace ClientInventory.Business
 {
     public class ClientServices : IClientServices
     {
-        private IReadRepository<Client> _repository;
+        private IClientRepository _repository;
 
-        public ClientServices(IReadRepository<Client> repository)
+        public ClientServices(IClientRepository repository)
         {
             _repository = repository;
         }

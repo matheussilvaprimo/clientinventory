@@ -9,10 +9,10 @@ namespace Server.Infra
     {
         private MongoContext<TEntity> _mongoContext;
 
-        protected MongoRepository(MongoContext<TEntity> mongoContext)
-        {
-            _mongoContext = mongoContext;
-        }
+        //protected MongoRepository(MongoContext<TEntity> mongoContext)
+        //{
+        //    _mongoContext = mongoContext;
+        //}
 
         public IEnumerable<TEntity> FetchAll()
         {
