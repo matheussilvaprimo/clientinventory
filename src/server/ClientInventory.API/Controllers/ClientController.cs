@@ -1,6 +1,7 @@
-﻿using ClientInventory.Business;
-using ClientInventory.Domain;
+﻿using ClientInventory.API.Models;
+using ClientInventory.Business;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -27,6 +28,18 @@ namespace ClientInventory.API.Controllers
         public async Task<IEnumerable<Client>> GetAll()
         {
             return await Task.Run(() => { return _clientServices.FetchAll(); });
+        }
+
+        [HttpPost("api/client")]
+        public async Task<Guid> Insert(Client e)
+        {
+            return await _clientServices.Insert(e);
+        }
+
+        [HttpPut("api/client")]
+        public async Task Update(Client e)
+        {
+            await _clientServices.Update(e);
         }
     }
 }

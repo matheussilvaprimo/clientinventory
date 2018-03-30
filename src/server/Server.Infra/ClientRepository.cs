@@ -1,4 +1,4 @@
-﻿using ClientInventory.Domain;
+﻿using ClientInventory.Domain.Entities;
 using Microsoft.Extensions.Options;
 using Server.Infra.Utils;
 

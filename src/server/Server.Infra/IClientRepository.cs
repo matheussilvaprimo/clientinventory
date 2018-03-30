@@ -1,4 +1,4 @@
-﻿using ClientInventory.Domain;
+﻿using ClientInventory.Domain.Entities;
 
 namespace Server.Infra
 {

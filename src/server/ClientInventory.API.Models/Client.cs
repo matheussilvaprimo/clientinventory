@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClientInventory.Domain.Entities
+namespace ClientInventory.API.Models
 {
-    public class Client : IEntity
+    public class Client
     {
         public Guid ID { get; set; }
         public string Name { get; set; }

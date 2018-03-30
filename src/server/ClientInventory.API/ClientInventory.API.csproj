@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClientInventory.API.Models\ClientInventory.API.Models.csproj" />
     <ProjectReference Include="..\ClientInventory.Business\ClientInventory.Business.csproj" />
   </ItemGroup>
 

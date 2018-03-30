@@ -17,7 +17,7 @@ namespace Server.Infra
             _mongoContext = new MongoContext(settings);
         }
 
-        public IEnumerable<T> FetchAll()
+        public IQueryable<T> FetchAll()
         {
             return _mongoContext.QueryCollection<T>();
         }
@@ -27,7 +27,7 @@ namespace Server.Infra
             return _mongoContext.QueryCollection<T>().Where(x => x.ID == Guid.Parse(id)).FirstOrDefault();
         }
 
-        public IEnumerable<T> Get(System.Linq.Expressions.Expression<Func<T, bool>> expression)
+        public IQueryable<T> Get(System.Linq.Expressions.Expression<Func<T, bool>> expression)
         {
             return _mongoContext.QueryCollection<T>().Where(expression);
         }
