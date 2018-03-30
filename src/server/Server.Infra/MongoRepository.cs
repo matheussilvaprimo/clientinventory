@@ -1,4 +1,6 @@
 ﻿using ClientInventory.Domain.Entities;
+using Microsoft.Extensions.Options;
+using Server.Infra.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,9 @@ namespace Server.Infra
     {
         private MongoContext _mongoContext;
 
-        protected MongoRepository(MongoContext mongoContext)
+        public MongoRepository(IOptions<AppSettings> settings)
         {
-            _mongoContext = mongoContext;
+            _mongoContext = new MongoContext(settings);
         }
 
         public IEnumerable<T> FetchAll()
