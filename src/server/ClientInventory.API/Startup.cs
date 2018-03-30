@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Server.Infra;
+using Server.Infra.Utils;
 
 namespace ClientInventory.API
 {
@@ -26,6 +27,12 @@ namespace ClientInventory.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<AppSettings>(settings =>
+            {
+                settings.ConnectionString = Configuration.GetSection("MongoConnection:ConnectionString").Value;
+                settings.Database = Configuration.GetSection("MongoConnection:Database").Value;
+            });
+
             services.AddMvc();
             services.AddScoped<IClientRepository, ClientRepository>();
             services.AddScoped<IClientServices, ClientServices>();
