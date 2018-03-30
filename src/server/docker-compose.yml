@@ -4,6 +4,8 @@ services:
   clientinventory.api:
     image: clientinventory.api
     container_name: client-api
+    ports:
+      - "6060:6060"
     build:
       context: .
       dockerfile: Dockerfile

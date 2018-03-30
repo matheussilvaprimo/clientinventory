@@ -14,7 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{CA6411AB-E989-44E2-B9BB-1BBE17184675}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
-		ClientInventory.API\Dockerfile = ClientInventory.API\Dockerfile
+		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
 Global
