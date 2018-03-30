@@ -40,7 +40,7 @@ namespace Server.Infra
             return id;
         }
 
-        public async void Update(T e)
+        public async Task Update(T e)
         {
             await _mongoContext.Collection<T>().InsertOneAsync(e);
         }

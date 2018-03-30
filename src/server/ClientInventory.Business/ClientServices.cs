@@ -3,6 +3,7 @@ using Server.Infra;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace ClientInventory.Business
 {
@@ -27,6 +28,16 @@ namespace ClientInventory.Business
         public IEnumerable<Client> Get(Expression<Func<Client, bool>> expression)
         {
             return _repository.Get(expression);
+        }
+
+        public async Task<Guid> Insert(Client e)
+        {
+            return await _repository.Insert(e);
+        }
+
+        public async Task Update(Client e)
+        {
+            await _repository.Update(e);
         }
     }
 }
