@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientInventory.API", "ClientInventory.API\ClientInventory.API.csproj", "{A27B8748-F8AE-4741-ACE9-FC0FF27844E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.API", "ClientInventory.API\ClientInventory.API.csproj", "{A27B8748-F8AE-4741-ACE9-FC0FF27844E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientInventory.Business", "ClientInventory.Business\ClientInventory.Business.csproj", "{C1191706-1598-421D-BEDE-77B08296F498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.Business", "ClientInventory.Business\ClientInventory.Business.csproj", "{C1191706-1598-421D-BEDE-77B08296F498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server.Infra", "Server.Infra\Server.Infra.csproj", "{87C0ADC5-C857-4AF3-9834-AFC09B133390}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Infra", "Server.Infra\Server.Infra.csproj", "{87C0ADC5-C857-4AF3-9834-AFC09B133390}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientInventory.Domain", "ClientInventory.Domain\ClientInventory.Domain.csproj", "{4CF84157-17DB-4DBB-8BC0-D5A1DF8EBA64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.Domain", "ClientInventory.Domain\ClientInventory.Domain.csproj", "{4CF84157-17DB-4DBB-8BC0-D5A1DF8EBA64}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9A9B7A3E-6811-4C44-9FB5-02783DD6956C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4CF84157-17DB-4DBB-8BC0-D5A1DF8EBA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CF84157-17DB-4DBB-8BC0-D5A1DF8EBA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CF84157-17DB-4DBB-8BC0-D5A1DF8EBA64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9B7A3E-6811-4C44-9FB5-02783DD6956C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9B7A3E-6811-4C44-9FB5-02783DD6956C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9B7A3E-6811-4C44-9FB5-02783DD6956C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9B7A3E-6811-4C44-9FB5-02783DD6956C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

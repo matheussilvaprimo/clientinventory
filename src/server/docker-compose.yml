@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  clientinventory.api:
+    image: clientinventory.api
+    container_name: client-api
+    build:
+      context: .
+      dockerfile: ClientInventory.API/Dockerfile
+  networks: 
+      client-nw:
+  clientmongodb:
+    image: mongo
+    container_name: client-mongo
+    volumes: 
+      - ./data:data/db
+    ports:
+      - "27017:27017"
+    networks: 
+      client-nw:
+networks:
+  client-nw:
+    name: client-nw
