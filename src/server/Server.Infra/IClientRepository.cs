@@ -2,7 +2,7 @@
 
 namespace Server.Infra
 {
-    public interface IClientRepository : IReadRepository<Client>
+    public interface IClientRepository : IReadRepository<Client>, IWriteRepository<Client>
     {
     }
 }
