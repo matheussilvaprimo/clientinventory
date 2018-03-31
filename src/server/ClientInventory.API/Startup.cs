@@ -30,6 +30,7 @@ namespace ClientInventory.API
 
 
             services.AddMvc();
+            services.AddScoped(typeof(AppSettings));
             services.AddScoped<IClientRepository, ClientRepository>();
             services.AddScoped<IClientServices, ClientServices>();
         }

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.API", "ClientInventory.API\ClientInventory.API.csproj", "{A27B8748-F8AE-4741-ACE9-FC0FF27844E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.API", "server\ClientInventory.API\ClientInventory.API.csproj", "{A27B8748-F8AE-4741-ACE9-FC0FF27844E7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.Business", "ClientInventory.Business\ClientInventory.Business.csproj", "{C1191706-1598-421D-BEDE-77B08296F498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.Business", "server\ClientInventory.Business\ClientInventory.Business.csproj", "{C1191706-1598-421D-BEDE-77B08296F498}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.Domain", "ClientInventory.Domain\ClientInventory.Domain.csproj", "{4CF84157-17DB-4DBB-8BC0-D5A1DF8EBA64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.Domain", "server\ClientInventory.Domain\ClientInventory.Domain.csproj", "{4CF84157-17DB-4DBB-8BC0-D5A1DF8EBA64}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{CA6411AB-E989-44E2-B9BB-1BBE17184675}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,19 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{CA6411AB
 		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.API.Models", "ClientInventory.API.Models\ClientInventory.API.Models.csproj", "{978C6ACB-DE8D-432A-B29D-8664B0361478}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientInventory.API.Models", "server\ClientInventory.API.Models\ClientInventory.API.Models.csproj", "{978C6ACB-DE8D-432A-B29D-8664B0361478}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{1F32F5E1-9A2D-4815-954D-9479D948C25D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Aspnet.Middlewares", "..\infra\Infra.Aspnet.Middlewares\Infra.Aspnet.Middlewares.csproj", "{90665D79-D1C3-4B78-B500-D428137536D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Aspnet.Middlewares", "infra\Infra.Aspnet.Middlewares\Infra.Aspnet.Middlewares.csproj", "{90665D79-D1C3-4B78-B500-D428137536D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Exceptions", "..\infra\Infra.Exceptions\Infra.Exceptions.csproj", "{CF8410AD-574F-4B6E-B250-7D3934B56F7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Exceptions", "infra\Infra.Exceptions\Infra.Exceptions.csproj", "{CF8410AD-574F-4B6E-B250-7D3934B56F7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientInventory.Repository", "ClientInventory.Repository\ClientInventory.Repository.csproj", "{20219236-3B84-41D0-984A-3526A6031180}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientInventory.Repository", "server\ClientInventory.Repository\ClientInventory.Repository.csproj", "{20219236-3B84-41D0-984A-3526A6031180}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Mongo.Repository", "..\infra\Infra.Mongo.Repository\Infra.Mongo.Repository.csproj", "{44DC7C9E-7C48-40BA-82DD-04209F2C6D06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Mongo.Repository", "infra\Infra.Mongo.Repository\Infra.Mongo.Repository.csproj", "{44DC7C9E-7C48-40BA-82DD-04209F2C6D06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientInventory.Utils", "ClientInventory.Utils\ClientInventory.Utils.csproj", "{E98E515B-73AB-4DC4-B9D6-E6C16FA157E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientInventory.Utils", "server\ClientInventory.Utils\ClientInventory.Utils.csproj", "{E98E515B-73AB-4DC4-B9D6-E6C16FA157E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
