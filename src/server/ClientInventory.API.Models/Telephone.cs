@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClientInventory.Utils;
+using System;
 
 namespace ClientInventory.API.Models
 {
@@ -7,13 +8,5 @@ namespace ClientInventory.API.Models
         public string ID { get; set; }
         public Int64 Number { get; set; }
         public TelephoneType Type { get; set; }
-    }
-
-    [Flags]
-    public enum TelephoneType
-    {
-        Residential,
-        Commercial,
-        Mobile
     }
 }

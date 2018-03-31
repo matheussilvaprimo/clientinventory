@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\infra\Infra.Mongo.Repository\Infra.Mongo.Repository.csproj" />
+    <ProjectReference Include="..\ClientInventory.Utils\ClientInventory.Utils.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using ClientInventory.Utils;
 
 namespace ClientInventory.API.Models
 {
@@ -11,12 +11,5 @@ namespace ClientInventory.API.Models
         public string State { get; set; }
         public string Country { get; set; }
         public AddressType Type { get; set; }
-    }
-
-    [Flags]
-    public enum AddressType
-    {
-        Residential,
-        Commercial
-    }
+    }  
 }

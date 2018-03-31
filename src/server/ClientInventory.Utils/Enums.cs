@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ClientInventory.Domain
+namespace ClientInventory.Utils
 {
     [Flags]
     public enum AddressType

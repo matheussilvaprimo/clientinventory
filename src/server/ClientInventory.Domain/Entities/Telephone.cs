@@ -1,4 +1,5 @@
-﻿using Infra.Mongo.Repository;
+﻿using ClientInventory.Utils;
+using Infra.Mongo.Repository;
 using System;
 
 namespace ClientInventory.Domain.Entities

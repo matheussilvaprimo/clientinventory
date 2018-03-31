@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ClientInventory.Utils
+﻿namespace ClientInventory.Utils
 {
     public class AppSettings
     {

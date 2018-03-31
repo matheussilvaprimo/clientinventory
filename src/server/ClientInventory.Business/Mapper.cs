@@ -54,7 +54,8 @@ namespace ClientInventory.Business
                 Complement = m.Complement,
                 Country = m.Country,
                 State = m.State,
-                Street = m.Street
+                Street = m.Street,
+                Type = m.Type
             };
 
             if (!string.IsNullOrWhiteSpace(m.ID))
@@ -74,7 +75,8 @@ namespace ClientInventory.Business
                 Country = m.Country,
                 ID = m.ID,
                 State = m.State,
-                Street = m.Street
+                Street = m.Street,
+                Type = m.Type
             };
 
             return e;
@@ -84,7 +86,8 @@ namespace ClientInventory.Business
         {
             var e = new entities.Telephone
             {
-                Number = m.Number
+                Number = m.Number,
+                Type = m.Type
             };
 
             if (!string.IsNullOrWhiteSpace(m.ID))
@@ -99,7 +102,8 @@ namespace ClientInventory.Business
             var e = new models.Telephone
             {
                 ID = m.ID,
-                Number = m.Number
+                Number = m.Number,
+                Type = m.Type
             };
             return e;
         }
