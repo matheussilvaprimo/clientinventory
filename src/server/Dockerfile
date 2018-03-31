@@ -6,11 +6,15 @@ ENV ASPNETCORE_URLS http://*:8080
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
 COPY *.sln ./
-COPY ClientInventory.API/ClientInventory.API.csproj ClientInventory.API/
-COPY ClientInventory.API.Models/ClientInventory.API.Models.csproj ClientInventory.API.Models/
-COPY ClientInventory.Business/ClientInventory.Business.csproj ClientInventory.Business/
-COPY Server.Infra/Server.Infra.csproj Server.Infra/
-COPY ClientInventory.Domain/ClientInventory.Domain.csproj ClientInventory.Domain/
+COPY server/ClientInventory.API/ClientInventory.API.csproj ClientInventory.API/
+COPY server/ClientInventory.API.Models/ClientInventory.API.Models.csproj ClientInventory.API.Models/
+COPY server/ClientInventory.Business/ClientInventory.Business.csproj ClientInventory.Business/
+COPY server/ClientInventory.Domain/ClientInventory.Domain.csproj ClientInventory.Domain/
+COPY server/ClientInventory.Repository.csproj ClientInventory.Repository/
+COPY server/ClientInventory.Utils.csproj ClientInventory.Utils/
+COPY infra/Infra.Aspnet.Middlewares.csproj Infra.Aspnet.Middlewares/
+COPY infra/Infra.Exceptions.csproj Infra.Exceptions/
+COPY infra/Infra.Mongo.Repository.csproj Infra.Mongo.Repository/
 RUN dotnet restore
 COPY . .
 WORKDIR /src/ClientInventory.API
