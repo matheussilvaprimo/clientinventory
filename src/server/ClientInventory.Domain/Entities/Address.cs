@@ -1,4 +1,6 @@
-﻿namespace ClientInventory.Domain.Entities
+﻿using Infra.Mongo.Repository;
+
+namespace ClientInventory.Domain.Entities
 {
     public class Address : MongoEntity
     {

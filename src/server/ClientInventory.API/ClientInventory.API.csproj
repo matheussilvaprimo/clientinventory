@@ -20,8 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\infra\Infra.Aspnet.Middlewares\Infra.Aspnet.Middlewares.csproj" />
     <ProjectReference Include="..\ClientInventory.API.Models\ClientInventory.API.Models.csproj" />
     <ProjectReference Include="..\ClientInventory.Business\ClientInventory.Business.csproj" />
+    <ProjectReference Include="..\ClientInventory.Utils\ClientInventory.Utils.csproj" />
   </ItemGroup>
 
 </Project>

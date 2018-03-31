@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infra.Mongo.Repository;
+using System;
 using System.Collections.Generic;
 
 namespace ClientInventory.Domain.Entities

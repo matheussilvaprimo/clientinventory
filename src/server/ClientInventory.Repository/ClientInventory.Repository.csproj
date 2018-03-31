@@ -5,9 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClientInventory.API.Models\ClientInventory.API.Models.csproj" />
+    <ProjectReference Include="..\..\infra\Infra.Mongo.Repository\Infra.Mongo.Repository.csproj" />
     <ProjectReference Include="..\ClientInventory.Domain\ClientInventory.Domain.csproj" />
-    <ProjectReference Include="..\ClientInventory.Repository\ClientInventory.Repository.csproj" />
+    <ProjectReference Include="..\ClientInventory.Utils\ClientInventory.Utils.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
 ﻿using ClientInventory.API.Models;
-using Server.Infra;
+using ClientInventory.Repository;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,11 +14,7 @@ namespace ClientInventory.Business
         {
             _repository = repository;
         }
-        public List<Client> FetchAll()
-        {
-            var list = _repository.FetchAll().ToList();
-            return list.Select(x => x.MapClientToModel()).ToList();
-        }
+        public List<Client> FetchAll() => _repository.FetchAll().ToList().Select(x => x.MapClientToModel()).ToList();
 
         public Client Get(string id)
         {
