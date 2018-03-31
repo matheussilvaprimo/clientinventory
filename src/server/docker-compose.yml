@@ -1,9 +1,11 @@
 version: '3.5'
 
 services:
-  clientinventory.api:
+  client-api:
     image: clientinventory.api
     container_name: client-api
+    depends_on: 
+      - client-mongo
     ports:
       - "80:80"
       - "8080:8080"
@@ -12,7 +14,7 @@ services:
       dockerfile: Dockerfile
     networks: 
       client-nw:
-  clientmongodb:
+  client-mongo:
     image: mongo
     container_name: client-mongo
     ports:
