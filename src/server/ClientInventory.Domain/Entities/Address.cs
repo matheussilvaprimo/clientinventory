@@ -12,11 +12,4 @@ namespace ClientInventory.Domain.Entities
         public string Country { get; set; }
         public AddressType Type { get; set; }
     }
-
-    [Flags]
-    public enum AddressType
-    {
-        Residential,
-        Commercial
-    }
 }
