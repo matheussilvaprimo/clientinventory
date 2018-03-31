@@ -7,6 +7,7 @@ FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
 COPY *.sln ./
 COPY ClientInventory.API/ClientInventory.API.csproj ClientInventory.API/
+COPY ClientInventory.API.Models/ClientInventory.API.Models.csproj ClientInventory.API.Models/
 COPY ClientInventory.Business/ClientInventory.Business.csproj ClientInventory.Business/
 COPY Server.Infra/Server.Infra.csproj Server.Infra/
 COPY ClientInventory.Domain/ClientInventory.Domain.csproj ClientInventory.Domain/

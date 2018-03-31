@@ -13,7 +13,6 @@ namespace ClientInventory.API
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseKestrel()
-                //.UseUrls("http://*:6060")
                 .UseStartup<Startup>()
                 .Build();
     }

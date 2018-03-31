@@ -24,19 +24,20 @@ namespace ClientInventory.API.Controllers
             return await Task.Run(() => { return _clientServices.Get(id); });
         }
 
-        [HttpGet("api/client/all")]
+        [HttpGet("all")]
         public async Task<IEnumerable<Client>> GetAll()
         {
             return await Task.Run(() => { return _clientServices.FetchAll(); });
         }
 
-        [HttpPost("api/client")]
-        public async Task<Guid> Insert(Client e)
+        [HttpPost]
+		[Route("add")]
+        public async Task<Guid> Insert([FromBody] Client e)
         {
             return await _clientServices.Insert(e);
         }
 
-        [HttpPut("api/client")]
+        [HttpPut("update")]
         public async Task Update(Client e)
         {
             await _clientServices.Update(e);
