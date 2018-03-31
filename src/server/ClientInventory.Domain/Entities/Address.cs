@@ -1,10 +1,7 @@
-﻿using System;
-
-namespace ClientInventory.Domain.Entities
+﻿namespace ClientInventory.Domain.Entities
 {
-    public class Address : IEntity
+    public class Address : MongoEntity
     {
-        public Guid ID { get; set; }
         public string Street { get; set; }
         public string Complement { get; set; }
         public string City { get; set; }

@@ -1,11 +1,8 @@
 ﻿using ClientInventory.API.Models;
-using entities = ClientInventory.Domain.Entities;
 using Server.Infra;
-using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ClientInventory.Business
 {
@@ -19,7 +16,8 @@ namespace ClientInventory.Business
         }
         public List<Client> FetchAll()
         {
-            return _repository.FetchAll().Select(x => x.MapClientToModel()).ToList();
+            var list = _repository.FetchAll().ToList();
+            return list.Select(x => x.MapClientToModel()).ToList();
         }
 
         public Client Get(string id)
@@ -27,7 +25,7 @@ namespace ClientInventory.Business
             return _repository.Get(id).MapClientToModel();
         }
 
-        public async Task<Guid> Insert(Client e)
+        public async Task<string> Insert(Client e)
         {
             return await _repository.Insert(e.MapClientToEntity());
         }

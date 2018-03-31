@@ -4,7 +4,7 @@ namespace ClientInventory.API.Models
 {
     public class Telephone 
     {
-        public Guid ID { get; set; }
+        public string ID { get; set; }
         public Int64 Number { get; set; }
         public TelephoneType Type { get; set; }
     }

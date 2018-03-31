@@ -2,10 +2,9 @@
 
 namespace ClientInventory.Domain.Entities
 {
-    public class Telephone : IEntity
+    public class Telephone : MongoEntity
     {
-        public Guid ID { get; set; }
         public Int64 Number { get; set; }
         public TelephoneType Type { get; set; }
-    }   
+    }
 }

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace ClientInventory.Domain.Entities
 {
-    public class Client : IEntity
+    public class Client : MongoEntity
     {
-        public Guid ID { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public char Gender { get; set; }
@@ -13,6 +12,6 @@ namespace ClientInventory.Domain.Entities
         public DateTime Joined { get; set; }
         public List<Address> Addresses { get; set; }
         public List<Telephone> Telephones { get; set; }
-        public List <string> Emails { get; set; }
+        public List<string> Emails { get; set; }
     }
 }

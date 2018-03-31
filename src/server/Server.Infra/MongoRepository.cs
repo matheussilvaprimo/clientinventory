@@ -1,5 +1,6 @@
 ﻿using ClientInventory.Domain.Entities;
 using Microsoft.Extensions.Options;
+using MongoDB.Bson;
 using Server.Infra.Utils;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace Server.Infra
 
         public T Get(string id)
         {
-            return _mongoContext.QueryCollection<T>().Where(x => x.ID == Guid.Parse(id)).FirstOrDefault();
+            return _mongoContext.QueryCollection<T>().Where(x => x.ID == id).FirstOrDefault();
         }
 
         public IQueryable<T> Get(System.Linq.Expressions.Expression<Func<T, bool>> expression)
@@ -32,12 +33,11 @@ namespace Server.Infra
             return _mongoContext.QueryCollection<T>().Where(expression);
         }
 
-        public async Task<Guid> Insert(T e)
+        public async Task<string> Insert(T e)
         {
-            var id = Guid.NewGuid();
-            e.ID = id;
+            e.ID = ObjectId.GenerateNewId().ToString();
             await _mongoContext.Collection<T>().InsertOneAsync(e);
-            return id;
+            return e.ID;
         }
 
         public async Task Update(T e)

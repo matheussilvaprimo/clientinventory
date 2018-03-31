@@ -32,7 +32,7 @@ namespace ClientInventory.API.Controllers
 
         [HttpPost]
 		[Route("add")]
-        public async Task<Guid> Insert([FromBody] Client e)
+        public async Task<string> Insert([FromBody] Client e)
         {
             return await _clientServices.Insert(e);
         }

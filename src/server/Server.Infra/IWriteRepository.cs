@@ -6,7 +6,7 @@ namespace Server.Infra
 {
     public interface IWriteRepository<TEntity> where TEntity : class, IEntity
     {
-        Task<Guid> Insert(TEntity e);
+        Task<string> Insert(TEntity e);
         Task Update(TEntity e);
     }
 }

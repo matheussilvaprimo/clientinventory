@@ -4,7 +4,7 @@ namespace ClientInventory.API.Models
 {
     public class Address 
     {
-        public Guid ID { get; set; }
+        public string ID { get; set; }
         public string Street { get; set; }
         public string Complement { get; set; }
         public string City { get; set; }

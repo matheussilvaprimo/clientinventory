@@ -14,12 +14,16 @@ namespace ClientInventory.Business
                 Age = m.Age,
                 Emails = m.Emails,
                 Gender = m.Gender,
-                ID = m.ID,
                 Joined = m.Joined,
                 LastName = m.LastName,
                 Name = m.Name,
                 Telephones = m.Telephones.Select(x => x.MapTelephoneToEntity()).ToList()
             };
+
+            if (!string.IsNullOrWhiteSpace(m.ID))
+            {
+                e.ID = m.ID;
+            }
 
             return e;
         }
@@ -49,10 +53,14 @@ namespace ClientInventory.Business
                 City = m.City,
                 Complement = m.Complement,
                 Country = m.Country,
-                ID = m.ID,
                 State = m.State,
                 Street = m.Street
             };
+
+            if (!string.IsNullOrWhiteSpace(m.ID))
+            {
+                e.ID = m.ID;
+            }
 
             return e;
         }
@@ -76,9 +84,13 @@ namespace ClientInventory.Business
         {
             var e = new entities.Telephone
             {
-                ID = m.ID,
                 Number = m.Number
             };
+
+            if (!string.IsNullOrWhiteSpace(m.ID))
+            {
+                e.ID = m.ID;
+            }
             return e;
         }
 
