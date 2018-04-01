@@ -43,15 +43,23 @@ namespace Infra.Aspnet.Middlewares
                 case BusinessException _:
                     code = HttpStatusCode.Conflict;
                     break;
-                default:
-                    code = HttpStatusCode.InternalServerError;
-                    break;
             }
 
-            var result = JsonConvert.SerializeObject(new { error = exception.Message ?? "Internal Server Error." });
+            var ret = exception.Data.Count > 0 ?
+                new
+                {
+                    error_code = exception.Data[Constants.ErrorCode].ToString(),
+                    message = exception?.Data[Constants.ErrorMessage].ToString() ?? Constants.DefaultInternalErrorMessage
+                } : new
+                {
+                    error_code = "1",
+                    message = Constants.DefaultInternalErrorMessage
+                };
+
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)code;
-            return context.Response.WriteAsync(result);
+
+            return context.Response.WriteAsync(JsonConvert.SerializeObject(ret));
         }
     }
 }
